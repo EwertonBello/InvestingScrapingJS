@@ -4,7 +4,9 @@ fetch(url)
   .then(response => response.text())
   .then(html => {
   	const doc = new DOMParser().parseFromString(html, "text/html");
+  	console.log(doc);
   	const rows = doc.querySelectorAll('tr');
+  	console.log(rows);
    	let noticia = {};
    	let noticias = [];
   	let dia_semana = "";
